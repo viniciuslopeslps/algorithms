@@ -1,25 +1,25 @@
-package main.v1;
+package main;
 
 public class SolutionV1 {
-    private char[] uniques;
+    private char[] uniqueLetters;
 
       public boolean uniqueStrings(String word) {
-        this.uniques = new char[word.length()];
+        this.uniqueLetters = new char[word.length()];
 
         for (int i = 0; i < word.length(); i++) {
-            char letter = word.charAt(i);
+            var letter = word.charAt(i);
 
             if (checkAlreadyInserted(letter)) {
                 return false;
             }
-            this.uniques[i] = letter;
+            this.uniqueLetters[i] = letter;
         }
 
         return true;
     }
 
     boolean checkAlreadyInserted(char letter) {
-        for (char unique : this.uniques) {
+        for (char unique : this.uniqueLetters) {
             if (unique == letter) {
                 return true;
             }
