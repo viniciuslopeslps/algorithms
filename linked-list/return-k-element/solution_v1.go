@@ -5,17 +5,21 @@ type Node struct {
 	value int
 }
 
-func ReturnKElement(node *Node) int {
-	var total int
+func ReturnKElementV1(node *Node, k int) int {
+	total := 1
 
 	for {
 		if node == nil {
-			break
+			return -1
+		}
+
+		if total == k {
+			return node.value
 		}
 
 		total += 1
 		node = node.Next
 	}
 
-	return total
+	return -1
 }

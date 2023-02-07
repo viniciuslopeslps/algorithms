@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestReturnKElement_1(t *testing.T) {
+func TestReturnKElementV2(t *testing.T) {
 	nodeFour := Node{
 		Next:  nil,
 		value: 4,
@@ -23,13 +23,13 @@ func TestReturnKElement_1(t *testing.T) {
 		Next:  &nodeTwo,
 		value: 1,
 	}
-	assert.Equal(t, ReturnKElementV1(&nodeOne, 3), 3)
+	assert.Equal(t, ReturnKElementV2(&nodeOne, 3), 3)
 }
 
-func TestReturnKElement_2(t *testing.T) {
+func TestReturnKElementV2_2(t *testing.T) {
 	nodeOne := Node{
 		Next:  nil,
 		value: 1,
 	}
-	assert.Equal(t, ReturnKElementV1(&nodeOne, 1), 1)
+	assert.Equal(t, ReturnKElementV2(&nodeOne, 1), 1)
 }
