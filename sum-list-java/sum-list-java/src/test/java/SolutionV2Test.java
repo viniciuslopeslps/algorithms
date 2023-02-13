@@ -4,8 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SolutionV1Test {
-
+public class SolutionV2Test {
 
     @Test
     public void sumListTest() {
@@ -17,8 +16,8 @@ public class SolutionV1Test {
         Node nodeTwo = new Node(nodeThree, 1);
         Node nodeOne = new Node(nodeTwo, 7);
 
-        SolutionV1 solutionV1 = new SolutionV1();
-        Node response = solutionV1.sumList(nodeOne, nodeFour);
+        SolutionV2 solutionV2 = new SolutionV2();
+        Node response = solutionV2.sumList(nodeOne, nodeFour);
 
         List<Integer> expected = new ArrayList<>();
         extracted(response, expected);

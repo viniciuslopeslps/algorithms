@@ -8,13 +8,19 @@ public class SolutionV1 {
         helper(nodeTwo, sbTwo);
         String result = String.valueOf(Integer.parseInt(sbOne.toString()) + Integer.parseInt(sbTwo.toString()));
 
-        Node previous = null;
+        Node previous;
+        if (result.length() == 0) {
+            return null;
+        }
+        previous = new Node(null, Character.getNumericValue(result.charAt(result.length() - 1)));
+        Node head = previous;
 
-        for (int i = result.length() - 1; i >= 0; i--) {
-            Node current = new Node(previous, Character.getNumericValue(result.charAt(i)));
+        for (int i = result.length() - 2; i >= 0; i--) {
+            Node current = new Node(null, Character.getNumericValue(result.charAt(i)));
+            previous.next = current;
             previous = current;
         }
-        return previous;
+        return head;
     }
 
     void helper(Node node, StringBuilder sb) {
