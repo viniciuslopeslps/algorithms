@@ -35,3 +35,4 @@ public class SolutionV1Test {
         Assertions.assertNull(character);
     }
 }
+
