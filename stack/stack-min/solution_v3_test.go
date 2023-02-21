@@ -5,8 +5,8 @@ import (
 	"testing"
 )
 
-func TestPushAndPop_solutionV1(t *testing.T) {
-	stack := StackMinV1{}
+func TestPushAndPop_solutionV3(t *testing.T) {
+	stack := StackMinV3{}
 	stack.Push(1)
 	stack.Push(2)
 	stack.Push(3)
@@ -18,8 +18,8 @@ func TestPushAndPop_solutionV1(t *testing.T) {
 	assert.Equal(t, *stack.Pop(), 1)
 }
 
-func TestMin_solutionV1(t *testing.T) {
-	stack := StackMinV1{}
+func TestMin_solutionv3(t *testing.T) {
+	stack := StackMinV3{}
 	stack.Push(1)
 	stack.Push(2)
 	stack.Push(3)
@@ -27,8 +27,18 @@ func TestMin_solutionV1(t *testing.T) {
 	assert.Equal(t, stack.Min(), 1)
 }
 
-func TestMin_solutionV1_3(t *testing.T) {
-	stack := StackMinV1{}
+func TestMin_solutionv3_2(t *testing.T) {
+	stack := StackMinV3{}
+	stack.Push(1)
+	stack.Push(0)
+	stack.Push(3)
+	stack.Push(3)
+
+	assert.Equal(t, stack.Min(), 0)
+}
+
+func TestMin_solutionV3_3(t *testing.T) {
+	stack := StackMinV3{}
 	stack.Push(1)
 	stack.Push(0)
 

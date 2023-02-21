@@ -36,3 +36,11 @@ func TestMin_solutionV2_2(t *testing.T) {
 
 	assert.Equal(t, stack.Min(), 0)
 }
+func TestMin_solutionV2_3(t *testing.T) {
+	stack := StackMinV2{}
+	stack.Push(1)
+	stack.Push(0)
+
+	assert.Equal(t, *stack.Pop(), 0)
+	assert.Equal(t, stack.Min(), 1)
+}
