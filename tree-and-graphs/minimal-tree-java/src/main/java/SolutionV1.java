@@ -5,7 +5,6 @@ public class SolutionV1 {
     public Node minTree(Integer[] numbers) {
         int pivot = (numbers.length) / 2;
 
-
         var nodes = new ArrayList<Node>();
         Node root = new Node(numbers[pivot]);
         nodes.add(root);
@@ -16,13 +15,11 @@ public class SolutionV1 {
         while (smallIdx >= 0) {
             Node first = nodes.get(0);
 
-            var small = numbers[smallIdx];
-            first.left = new Node(small);
+            first.left = new Node(numbers[smallIdx]);
             nodes.add(first.left);
 
             if (bigIdx < numbers.length) {
-                var big = numbers[bigIdx];
-                first.right = new Node(big);
+                first.right = new Node(numbers[bigIdx]);
                 nodes.add(first.right);
             }
 
